@@ -1,0 +1,19 @@
+{
+  "url" : "https://lift-api.vfsglobal.com/appointment/slots",
+  "urlparams" : {
+    "countryCode":"bgd",
+    "missionCode":"dnk",
+    "centerCode":"DEDK",
+    "loginUser": "YOU_EMAIL",
+    "visaCategoryCode":"002",
+    "languageCode":"en-US",
+    "applicantsCount":"1",
+    "days":"90",
+    "slotType":"2"
+  },
+  "paths" : {
+    "auth" : "./auth.txt",
+    "output" : "./output.txt"
+  },
+  "sound" : "./alert.mp3"
+}

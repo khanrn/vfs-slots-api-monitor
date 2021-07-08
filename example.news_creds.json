@@ -1,0 +1,12 @@
+{
+  "url" : "https://d2ab400qlgxn2g.cloudfront.net/dev/spaces/xxg4p8gt3sg6/environments/master/entries",
+  "urlparams" : {
+    "content_type" : "countryNews",
+    "fields.locale" : "dnk > bgd > en&dnk > en",
+    "fields.permanent" : "true"
+  },
+  "headers" : {"Authorization": "AUTH_BEARER_TOKEN"},
+  "max_num" : 3,
+  "delay" : 60,
+  "sound" : "./alert.mp3"
+}

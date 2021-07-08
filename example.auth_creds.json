@@ -1,0 +1,12 @@
+{
+    "url":"https://visa.vfsglobal.com/bgd/en/dnk/login",
+    "email_id":"//*[@id=\"mat-input-0\"]",
+    "password_id":"//*[@id=\"mat-input-1\"]",
+    "ensure_login":"//*[contains(text(), 'Start New Booking')]",
+    "submit":"//*[contains(text(), 'Sign In')]",
+    "user":"YOUR_EMAIL",
+    "pass":"YOUR_PASSWORD",
+    "auth_path":"./auth.txt",
+    "refr_delay":600,
+    "avrg_delay":10
+}

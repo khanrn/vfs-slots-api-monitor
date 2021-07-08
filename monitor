@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ "$1" = "--with-news" ];
+then
+    tmux new-session -d zsh
+    tmux split-window -h zsh
+    #sends keys to first and second terminals
+    tmux send -t 1 "sleep 45 && python3 PingVFS.py" C-m
+    tmux send -t 2 "python3 AuthVFS.py" C-m
+    tmux split-window -v zsh
+    tmux send -t 3 "python3 NewsVFS.py" C-m
+    tmux split-window -t 1 -v zsh
+    tmux send -t 2 "sleep 60 && tail -f output.txt" C-m
+    tmux -2 attach-session -d
+else
+    tmux new-session -d zsh
+    tmux split-window -h zsh
+    #sends keys to first and second terminals
+    tmux send -t 1 "sleep 60 && tail -f output.txt" C-m
+    tmux send -t 2 "sleep 45 && python3 PingVFS.py" C-m
+    tmux split-window -v zsh
+    tmux send -t 3 "python3 AuthVFS.py" C-m
+    tmux -2 attach-session -d
+fi
