@@ -61,7 +61,10 @@ class PingVFS:
             + "?" \
             + urlencode(self.urlparams, quote_via=quote_plus)
 
-        resp = requests.get(url, headers=headers)
+        try:
+            resp = requests.get(url, headers=headers)
+        except:
+            return "ERROR Connection Refused"
 
         if os.path.isfile(self.paths["auth"]):
             self.get_auth_token()
